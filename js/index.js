@@ -40,10 +40,10 @@ window.onload=function()//chuyen huong trang web
 }
 function home_redirect(){
     // alert('Home');
-    window.location="http://127.0.0.1:5500/doan/index.html";//chuyen huong den trang chu 
+    window.location="http://127.0.0.1:5500/doan/html/index.html?plants#";//chuyen huong den trang chu 
 }
 function pr_redirect(){
-    window.location="http://127.0.0.1:5500/doan/index.html?plants";
+    window.location="http://127.0.0.1:5500/doan/html/index.html?plants";
 }
 function Subscribe_redirect(){
     alert('Subscribed!');

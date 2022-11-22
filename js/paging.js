@@ -285,12 +285,12 @@ pageConfig.addEventListener('change', () => {
     }
     changePage();
 });
-
+const dt = document.getElementById('detail');
 function renderProduct(container) {
     html = '';
     const content = container.map((item, index) => {
         if (index >= start && index < end) {
-            html += '<div class="divproduct" >';
+            html += '<div class="divproduct" onclick=dt.style.display="block">';
             html += '<div class="box">';
             html += '<a>';
             html += `<div class="img_pr" id="${index}";" ><img src="` + item.image + '"></div>';
@@ -503,8 +503,8 @@ function show_detail(product) {
           </svg>
           </button>
         </div>
+        <div class="cart">add cart</div>
             </li>
-            <li>add cart</li>
         </ul>
     </div>`;
     $('#product-detail').html(html_detail);
