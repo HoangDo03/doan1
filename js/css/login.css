@@ -1,0 +1,87 @@
+:root {
+  --green:#babd8e;
+  --dark-green:#2b3928;
+  --yellow:#ffefcd;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #f1f5f9;
+    font-family: "Roboto", sans-serif;
+  }
+  .wapper {
+    width: 300px;
+    background-color: white;
+    padding: 10px 30px 30px ;
+    border-radius: 50px;
+    margin: 60px auto;
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.5);
+    color: var(--dark-green);
+  }
+  .wapper input {
+    padding-left:  10px;
+    margin-bottom: 10px;
+    height: 45px;
+    width: 100%;
+    border: 1px solid var(--dark-green);
+    outline: none;
+    border-radius: 10px;
+  }
+  .wapper .btn {
+    padding: 8px 15px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    background: var(--dark-green);
+    text-transform: uppercase;
+    color: var(--yellow);
+    transition: all 0.2s linear;
+    margin: 10px;
+  }
+  .btn:hover {
+    transform: scale(1.1);
+  }
+  .wapper input:focus {
+    border: 1px solid darkgreen;
+  }
+  .wapper input::placeholder {
+    color: var(--dark-green);
+  }
+
+  .wapper input{
+    background-color: var(--yellow);
+  }
+  /*.wapper .signup-link {
+    display: block;
+    transform: translateX(120px);
+    margin-bottom: 20px;
+    color: var(--bg--color);
+  }*/
+  .wapper .signup-link{
+    display: block;
+    padding-top: 16px;
+    margin-left: 5px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color:var(--dark-green);
+    transition: .3s linear;
+  
+  }
+  .wapper div:last-child{
+    display: flex;
+    justify-content: center;
+  }
+  .wapper p{
+    color: var(--green);
+    letter-spacing: 1px;
+
+  }
+  .wapper .user_name,.gmail, .password{
+    display: flex;
+    margin-left: 20px;
+    margin: 10px;
+  }
+  
+  
