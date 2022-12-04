@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Cart</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+    <style>
+        :root {
+            --green: #babd8e;
+            --dark-green: #2b3928;
+            --yellow: #ffefcd;
+        }
+        body {
+            background-color: var(--yellow);
+            color: var(--dark-green);
+            font-size: 1.1em;
+        }
+
+        #cart .title{
+            text-align: center;
+            text-transform: uppercase;
+            display: flex;
+            justify-content:center;
+            letter-spacing: 5px;
+            font-size: 1.8em;
+        }
+
+        table {
+            width: 90%;
+            border: var(--green) solid 2px;
+            margin: 50px auto;
+            border-collapse: collapse;
+        }
+
+        tr th{
+            font-size: 1.5em;
+        }
+        tr th , tr td{
+            text-align: center;
+            padding: 5px;
+        } 
+        tr td i{
+            font-size: 20px;
+            cursor: pointer;
+        }
+        #checkout{
+            display: flex;
+            justify-content: center;
+        }
+
+        .price-total{
+            text-transform: uppercase;
+            display: flex;
+            justify-content:center;
+            letter-spacing: 5px;
+
+        }
+        #checkout .btn-checkout{
+            padding: 10px 30px;
+        }
+
+        #checkout .btn-checkout button{
+            background-color: var(--green);
+            border: var(--green) 2px solid;
+            padding: 5px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+
+<body>
+    <form id="cart">
+        <div class="title">
+            Shopping Cart
+        </div>
+        <table>
+           <thead>
+            <tr>
+                
+                <th>Name</th>
+                <th>Price</th>
+                <th>Amount</th>
+                <th>Aciton</th>
+            </tr>
+           </thead>
+            <tbody id="mycart">
+                
+            </tbody>
+        </table>
+        <div id="checkout">
+            <div class="price-total">
+                <p>Total:</p>
+            </div>
+            <div class="btn-checkout">
+                <button>Checkout</button>
+            </div>
+        </div>
+    </form>
+</body>
+<script src="../js/cart.js"></script>
+</html>

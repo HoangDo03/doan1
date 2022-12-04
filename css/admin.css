@@ -1,3 +1,8 @@
+:root {
+  --green: #babd8e;
+  --dark-green: #2b3928;
+  --light-yellow: #ffefcd;
+}
 * {
   padding: 0;
   margin: 0;
@@ -251,4 +256,103 @@ tr td:last-child {
 }
 @media only screen and (max-width:960px) {
 
+}
+
+/* inventory */
+
+.form button {
+  width: 100px;
+  height: 30px;
+}
+
+.form {
+  width: 500px;
+  height: fit-content;
+  text-align: center;
+  /* display:flex;
+  justify-content:center; */
+  margin: 10px auto;
+  background-color: #f1f5f9;
+  box-sizing: border-box;
+
+}
+
+.form .form_group {
+  display: flex;
+  justify-content: right;
+  padding: 5px;
+
+}
+
+.form label {
+  padding: 0 10px;
+  width: 30%;
+  font-size: 1.2em;
+  color: var(--dark-green);
+
+}
+
+.form input {
+  width: 70%;
+  height: 30px;
+  font-size: 1.1em;
+}
+
+.form div {
+  margin: 20px;
+}
+
+.form button {
+  margin: 10px;
+  font-size: 1.1em;
+  padding: 5px;
+  width: 100px;
+  height: 50px;
+}
+
+.form img{
+  width: 100px;
+  height: 100px;
+}
+#table .title {
+  background-color: var(--green);
+  border-right: var(--green) solid 1px;
+  color: var(--dark-green);
+}
+
+table {
+  width: 80%;
+  height: fit-content;
+  border: var(--dark-green) 2px solid;
+  background-color: var(--light-yellow);
+  color: var(--dark-green);
+  border-collapse: collapse;
+  border-spacing: 0.5rem;
+  text-align: center;
+  margin: 5px auto;
+  font-size: 1.5em;
+  box-sizing: border-box;
+}
+
+#table thead {
+  border-color: var(--green);
+}
+
+table button {
+  background: none;
+  color: var(--dark-green);
+  display: inline-flex;
+  justify-content: space-around;
+  /* border-radius: 40px; */
+  border: none;
+  padding: 15px;
+  margin: 10px;
+  font-size: 1.2em;
+  cursor: pointer;
+}
+
+th,
+td {
+  border: #2b3928 2px solid;
+  padding: 10px;
 }

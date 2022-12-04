@@ -25,7 +25,8 @@ function redirect(){
         case "cart":
         {
                        
-            document.getElementById('change').innerHTML='<div>cart</div>';
+            document.getElementById('change').style.display='none';
+            document.getElementById('cart').style.display='block';
             break;
         }
     }
@@ -40,7 +41,7 @@ function home_redirect(){
     window.location.href="index.html";//chuyen huong den trang chu 
 }
 function pr_redirect(){
-    window.location="http://127.0.0.1:5500/doan/html/index.html?plants";
+    window.location="http://127.0.0.1:5500/doan1/html/index.html?plants";
 }
 function redirect_admin(){
     window.location.href="admin.html";

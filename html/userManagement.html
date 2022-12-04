@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>User Management</title>
+
+    <style>
+        :root {
+            --green: #babd8e;
+            --dark-green: #2b3928;
+            --light-yellow: #ffefcd;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #f1f5f9;
+            box-sizing: border-box;
+        }
+
+        .form button {
+            width: 100px;
+            height: 30px;
+        }
+
+        .form {
+            width: 500px;
+            height: fit-content;
+            text-align: center;
+            /* display:flex;
+            justify-content:center; */
+            margin: 10px auto;
+            background-color: #f1f5f9;
+            box-sizing: border-box;
+
+        }
+
+        .form .form_group {
+            display: flex;
+            justify-content: right;
+            padding: 5px;
+
+        }
+
+        .form label {
+            padding: 0 10px;
+            width: 30%;
+            font-size: 1.2em;
+            color: var(--dark-green);
+
+        }
+
+        .form input {
+            width: 70%;
+            height: 30px;
+            font-size: 1.1em;
+        }
+
+        .form div {
+            margin: 20px;
+        }
+
+        .form button {
+            margin: 10px;
+            font-size: 1.1em;
+            padding: 5px;
+            width: 100px;
+            height: 30px;
+        }
+        .form select {
+            margin: 10px;
+            font-size: 1.1em;
+            padding: 5px;
+            height: 30px;
+        }
+        #table .title {
+            background-color: var(--green);
+            border-right: var(--green) solid 1px;
+            color: var(--dark-green);
+        }
+
+        table {
+            width: 80%;
+            height: fit-content;
+            border: var(--dark-green) 2px solid;
+            background-color: var(--light-yellow);
+            color: var(--dark-green);
+            border-collapse: collapse;
+            border-spacing: 0.5rem;
+            text-align: center;
+            margin: 5px auto;
+            font-size: 1.5em;
+            box-sizing: border-box;
+        }
+
+        #table thead {
+            border-color: var(--green);
+        }
+
+        table button {
+            background: none;
+            color: var(--dark-green);
+            display: inline-flex;
+            justify-content: space-around;
+            /* border-radius: 40px; */
+            border: none;
+            padding: 15px;
+            margin: 10px;
+            font-size: 1.2em;
+            cursor: pointer;
+        }
+
+        th,
+        td {
+            border: #2b3928 2px solid;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <form name="" onsubmit="return check_add();">
+    <div class="form">
+        <!-- <div class="form_group">
+            <label for="fullname">Full Name</label>
+            <input type="text" id="fullname" class="form_input">
+            <div class="error_message"></div>
+        </div> -->
+        <div class="form_group">
+            <label for="user">Username</label>
+            <input type="text" id="user" class="form_input">
+            <div class="error_message"></div>
+        </div>
+        <div class="form_group">
+            <label for="pass">Password</label>
+            <input type="text" id="pass" class="form_input">
+            <div class="error_message"></div>
+        </div>
+        <!-- <div class="form_group">
+            <label class="datesignup">Date of registration</label>
+            <input type="date" id="datesignup" placeholder="mm/dd/yy" class="form_input">
+            <div class="error_message"></div>
+        </div> -->
+        <select name="selectuser" id="idselect">
+            <option value="-1">Select user</option>
+            <option value="0" id="kh">Customer</option>
+            <option value="1" id="admin">Admin</option>
+        </select>
+        <button id="showuser" onclick="create();">Add user</button>
+    </div>
+    </form>
+    <table class="table" id="table">
+        
+    </table>
+
+    <script>
+    function create(){
+        var pt=document.getElementById("idselect");
+        switch(pt.value)
+        {
+            case '0':
+                
+                createnewCustomer();
+                break;
+            case '1':
+                createnewAdmin();
+                break;
+        }
+        
+    }
+    // function createAdmin(){
+    //     var userArray = [];
+    //     var bien="khachhang";
+    //     if(localStorage.getItem('userArr')==null){		
+    //         alert("co vao day k!!!!!!!!!!!");
+            
+    //      //userArray = JSON.parse(localStorage.getItem('user'));
+    //         var user1 = {username: 'admin', password: 'admin', datesignup: '01-01-2022', usertype:'admin'};
+    //         var user0={username:bien , password: bien, fullname: bien, datesignup: bien, usertype:'kh'};
+    //         userArray.push(user0);
+    //         userArray.push(user1);
+    //         console.log(userArray);
+    //         localStorage.setItem('userArr',JSON.stringify(userArray));
+    //     }
+    // }
+    //----------------------show user----------------------------------
+    function showUserList(){
+    //alert("co vao day k");
+        if(localStorage.getItem('userArr')===null){
+            return false;
+        }
+         userArray = JSON.parse(localStorage.getItem('userArr'));
+         var table = ` <thead>
+             <tr>
+                <th class="title">ID</th>
+                <th class="title">Username</th>
+                <th class="title">Passsword</th>
+                <th class="title">User type</th>
+                <th class="title">Delete</th>
+            </tr> 
+        </thead>`
+        //var tr='<tr><th>ID</th><th>Full Name</th><th>User</th><th>Password</th><th>Date of registration</th><th>Delete</th></tr>';
+        // for(var i=0; i<userArray.length;i++){
+        //     tr+='<tr><td>'+(i+1)+'</td><td>'+userArray[i].fullname+'</td><td>'+userArray[i].username+'</td><td>'+userArray[i].datesignup+'</td><td>'+ userArray[i].password +'</td><td><button class="delete" onClick="deleteuser(\''+userArray[i].username+'\')">&times;</button></td></tr>';
+        
+        // }
+        // document.getElementById('userlist').innerHTML=tr;
+        for (let i = 0; i < userArray.length; i++) {
+            table +=
+
+                '<tr><td>' + (i + 1) +  '</td> <td>' + userArray[i].username + '</td><td>'+userArray[i].password + '</td> <td>' + userArray[i].usertype+'</td><td><button class="delete" onClick="deleteuser(\''+userArray[i].username+'\')">&times;</button></td></tr>'
+
+        }
+        document.getElementById('table').innerHTML = table;
+    }
+    
+    //su dung: push them phan tu vao cuoi mang, pop: xoa phan tu cuoi mang, unshit: them phan tu vao dau mang, shit: xoa phtu nam dau mang-----
+    //----------------------delete user-------------------------------
+    function deleteuser(usernamedelete){
+        var userArray = JSON.parse(localStorage.getItem('userArr'));
+        for(var i=0;i<userArray.length;i++){
+            if(userArray[i].username == usernamedelete){
+                if(confirm('Are you sure you want to detele ?')){
+                    userArray.splice(i, 1);
+                }
+            }
+        }
+        localStorage.setItem('userArr',JSON.stringify(userArray));
+        showUserList();
+    }
+    var user0;
+    function createnewCustomer()
+    {
+        userArray = JSON.parse(localStorage.getItem('userArray'));
+        user0 = {
+            //id: document.getElementById('id').value,
+            //fullname: document.getElementById('fullname').value,
+            username: document.getElementById('user').value,
+            password: document.getElementById('pass').value,
+            //datesignup: document.getElementById('datesignup').value,
+            usertype: 'Customer'
+        };
+        //var user1 = {username: 'user123', password: '123456', fullname: 'Nguyen Van C ', address: '273 An An Duong Vuong - P3 - Q5', phone: '0566490523' , datesignup: '23-11-1999'};
+        //user1 = {username: document.getElementById("user").value, password: document.getElementById("pass").value, fullname, datesignup: document.querySelector('datesignup'), usertype:"kh"};
+        console.log(user0.username);
+        //console.log(user1.fullname);
+        console.log("Type user 0:");
+        console.log(typeof(user0));
+        userArray.push(user0);
+        
+        localStorage.setItem('userArr',JSON.stringify(userArray));
+        showUserList();
+    }
+    function createnewAdmin()
+    {
+        userArray = JSON.parse(localStorage.getItem('userArray'));
+        user1 = {
+            //id: document.getElementById('id').value,
+            //fullname: document.getElementById('fullname').value,
+            username: document.getElementById('user').value,
+            password: document.getElementById('pass').value,
+            //datesignup: document.getElementById('datesignup').value,
+            usertype: 'Admin'
+        };
+    
+        console.log(user1.username);
+        //console.log(user1.fullname);
+        console.log("Type user 1:");
+        console.log(typeof(user1));
+        userArray.push(user1);
+        
+        localStorage.setItem('userArr',JSON.stringify(userArray));
+        showUserList();
+    }
+    
+    function login()
+    {
+        alert("login");
+        var username=document.getElementById("user").value;
+        var password=document.getElementById("pass").value;
+        var userArray = JSON.parse(localStorage.getItem('userArr'));
+        for(i=0;i<userArray.length;i++)
+            if(userArray[i].username==username && userArray[i].password==password)
+                window.location="abc.html";
+        alert("dang nhap khong thanh cong");		
+    }
+    
+    // function check_add()
+    // {
+    //     var fullname=document.getElementById("fullname");
+    //     var user=document.getElementById("user");
+    //     var password=document.getElementById("pass");
+    //     var datesignup=document.getElementById("datesignup");
+    //     if(fullname.value=="" || user.value=="" || password.value=="" || datesignup.value=="")
+    //     {
+    //         alert("Please enter full information in the form !");
+    //         //fullname.focus();
+    //         return false;
+    //     }
+    //     return true;
+    // }
+        
+   
+    // ----json là một dạng truyền nhận trên môi trường internet đến server----------------
+    //Convert to JSON
+    //- eval(): là hàm trong javascript được dùng để chuyển đổi một biến string sang dạng JSON
+    //- JSON.parse(): Cú pháp JSON.parse(text [, reviver])
+    //Là hàm trong javascript được dùng để chuyển đổi chuổi JSON sang đối tượng
+    
+    
+    //JSON.stringify(): Cú pháp JSON.stringify(value [, replacer] [, space])
+    //Là hàm trong javascript được dùng để chuyển đổi một object và một array thành json
+    
+    </script>
+    </head>
+    
+    <body>
+    <script>
+    window.onload=function()
+    {
+        alert("hien thi thanh cong");
+        createAdmin();
+        showUserList();
+        
+    }
+    
+    
+    </script>
+    </body>
+    </html>

@@ -31,12 +31,6 @@
     text-transform: uppercase;
     letter-spacing: 0.1em;
 }
-.adcontent #btn-admin{
-    /* display: none; */
-    float: right;
-    font-size: 1.2em;
-    cursor: pointer;
-}
 
 /* thanh tim kiem */
 #search {
@@ -55,6 +49,8 @@
 #search-box {
     background-color: #fff;
     border-radius: 30px;
+    display: flex;
+    align-items: center;
 }
 
 #search-box #search-text {
@@ -77,13 +73,14 @@
 #search-box #search-button {
     background-color: #fff;
     border: none;
-    padding: 15px 14px;
+    padding: 16px 14px;
     cursor: pointer;
     border-radius: 50%;
     font-size: 18px;
     color: var(--colortext);
 }
-#plant .no-result{
+
+#plant .no-result {
     display: none;
     margin-left: 20px;
     font-size: 30px;
@@ -94,32 +91,73 @@
     padding: 80px;
     font-family: florence, cursive;
 }
-#plant .page-config{
+
+#plant .page-config {
     margin-right: 10px;
     font-family: florence, cursive;
 }
 
-#plant .page-config select{
+#plant .page-config select {
     width: 50px;
     height: 25px;
     border-radius: 3px;
 }
 
-#plant .total-item , .total-page{
+#plant .total-item,
+.total-page {
     margin-right: 10px;
     font-family: florence, cursive;
 }
+
 /* #plant .page-config, .total-item, .total-page{
     display: flex;
     /* justify-content: space-between; 
     align-items: center;
     flex-wrap: wrap;
 } */
-#plant .page .active{
-    background: var(--color-bg);
+/* #plant .page .active{
+    background: #2b3928;
     border: 1px solid black;
-    border-radius: 50%;
+    border-radius: 5px;
+} */
+/* #plant #container .divproduct ul{
+    width: calc(100% / 4 - 50px);
+    margin-right: 50px;
 }
+
+#plant #container .divproduct  .img_pr{
+    position: relative;
+    width: 100%;
+    padding-top: 58%;
+    display: block;
+} */
+/* #plant #container .divproduct .img_pr{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+} */
+/* #search-container {
+    margin: 1em 0;
+}
+#search-container input {
+    background-color: transparent;
+    width: 40%;
+    border-bottom: 2px solid #110f29;
+    padding: 1em 0.3em;
+}
+#search-container input:focus {
+    border-bottom-color: #424530;
+}
+#search-container button {
+    padding: 1em 2em;
+    margin-left: 1em;
+    background-color: #424530;
+    color: #babd8e;
+    border-radius: 5px;
+    margin-top: 0.5em;
+} */
 /* thanh menu cu */
 /* #header{
     width: 100%;
@@ -456,7 +494,7 @@ span {
     /* border-right: 1px solid rgba(0, 0, 0, 1); */
     z-index: 1000;
     /*de len cac phan content khac*/
-    transition: ease-in-out 0.5s;
+    transition: ease-in-out 0.8s;
     left: 0;
     top: 0;
 }
@@ -513,24 +551,25 @@ span {
 } */
 
 nav .toggle_menu {
-    position:absolute;
+    position: absolute;
     top: 50px;
-    left:10px;
+    right: -60px;
     width: 60px;
     height: 45px;
-    /* display: flex;
-    justify-content: center; */
+    display: flex;
+    justify-content: center;
     align-items: center;
-    color: var(--coloricon);
+    background: #ffefcd;
     transition: linear 0.2s;
     cursor: pointer;
     font-size: 30px;
     display: none;
     padding: 7px 30px;
     text-align: center;
+
 }
 
-nav .toggle_menu:active{
+nav .toggle_menu:active {
     background-color: #babd8e;
 }
 
@@ -558,9 +597,9 @@ body {
 /* day la phan home */
 #section1 {
     width: 100%;
-    height: 500px;
+    height: 600px;
     background-color: var(--color-bg);
-    background-image: url(https://cdn.shopify.com/s/files/1/0556/1873/2316/products/Xuongrong.jpg?v=1666253238&width=1100);
+    background-image: url(img/bgsection1_1.jpg);
     background-repeat: no-repeat;
     background-position-x: 200px 50px;
     background-size: 100%;
@@ -595,13 +634,92 @@ body {
     cursor: pointer;
 }
 
+/*Hieu ung Animation*/
+/* #section1 {
+    animation: anist1 1s linear;
+}
+@keyframes anibst1 {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+} */
+#section1 .text h1 {
+    animation: anih1 1s linear;
+}
+
+@keyframes anih1 {
+    0% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+#section1 .text h2 {
+    animation: anih2 1s linear;
+}
+
+@keyframes anih2 {
+    0% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+#section1 .text button {
+    animation: anibutton 1s linear;
+}
+
+@keyframes anibutton {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+#section1 img {
+    animation: aniimg 1s linear;
+}
+
+@keyframes aniimg {
+    0% {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+
 #section2 {
     width: 100%;
     height: fit-content;
     background-color: var(--color-bg);
     border-bottom: #424530 solid 2px;
     padding-bottom: 40px;
-    background-image: url(https://cdn.shopify.com/s/files/1/0669/8346/1153/products/Thi_tk_ch_acoten_2.png?v=1667144695&width=1100);
+    background-image: url(img/bgsection2.png);
     background-repeat: no-repeat;
     background-size: 100%;
 }
@@ -656,8 +774,118 @@ body {
 }
 
 #container_bs {
+    /* width: 100%;
+    padding: 40px 0;
+    position: relative;*/
+    /* overflow-x: hidden; */
+    /* height: 400px;  */
+    display: flex;
+    min-height: 400px;
+    align-items: center;
+    justify-content: center;
+    position: relative;
     width: 100%;
+    overflow: hidden;
+    padding: 40px 0;
+
 }
+
+#container_bs::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    clip-path: inset(47% 0 0 0);
+    z-index: -1;
+    height: 100%;
+}
+
+/* ::selection{
+    background:	#FF676D;
+    color: #fff;
+  } */
+.slide-container {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    /* width: 200%; */
+    transition: 1s;
+    position: absolute; 
+    align-items: start;
+    justify-content: start;
+    /* left: 0;
+    transition: 0.4s ease-in-out; */
+}
+
+#two:checked ~ .slide-container{
+    margin-left: -100%;
+  }
+#container_bs .slide-container {
+    width: calc(100%/0.5 - 10px);
+    display: flex;
+    flex-wrap: nowrap;
+    margin: 0 20px;
+    justify-content: space-between;
+  }
+  .slide-container .divproduct{
+    /* width: calc(100% / 2 - 10px); */
+    background: #ffefcd;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
+    transition: all 0.4s ease;
+  }
+  .slide-container .divproduct:hover{
+    transform: translateY(-15px);
+  }
+  .slide-container .divproduct .img{
+    /* height: 130px; */
+    /* width: 150px; */
+    border-radius: 50%;
+    padding: 3px;
+    background: #ffefcd;
+    margin-bottom: 14px;
+  }
+  .slide-container .divproduct .img img{
+    height: 100%;
+    width: 100%;
+    border: 3px solid #ffefcd;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+ 
+   #container_bs .button{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+  }
+#section3  .button label{
+    height: 15px;
+    width: 15px;
+    background: #fff;
+    border-radius: 20px;
+    margin: 0 4px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+  }
+#section3  .button label.active{
+    width: 35px;
+  }
+  #one:checked ~ .button .one{
+    width: 35px;
+  }
+  #one:checked ~ .button .two{
+    width: 15px;
+  }
+  #two:checked ~ .button .one{
+    width: 15px;
+  }
+  #two:checked ~ .button .two{
+    width: 35px;
+  }
+ #section3 input[type="radio"]{
+    display: none;
+  }
 
 .divproduct {
     width: 285px;
@@ -692,7 +920,7 @@ img {
     width: 100%;
     height: 500px;
     background-color: var(--color-bg);
-    background-image: url(https://cdn.shopify.com/s/files/1/0556/1873/2316/products/Thi_tk_ch_acoten_1.png?v=1666967691&width=1100);
+    background-image: url(img/bgsection4.png);
     background-repeat: no-repeat;
     background-size: cover;
     border-bottom: #2b3928 solid 2px;
@@ -1310,7 +1538,7 @@ img {
 }
 
 /* day la phan plants */
-#title-plant{
+#title-plant {
     font-family: florence, cursive;
     color: var(--colortext);
     font-size: 2em;
@@ -1358,6 +1586,21 @@ img {
     pointer-events: none;
 }
 
+/* #container .divproduct  a{
+    position: relative;
+    /* width: 250px; 
+    padding-top: 70%;
+    display: block;
+}
+
+#container .divproduct a img{
+    /* width: 250px; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* height: 100%; 
+} */
+
 .divproduct:hover .box {
     opacity: 90%;
 }
@@ -1399,10 +1642,11 @@ img {
     /* justify-content:center; */
 }
 
-.page ul li {
+#plant .page ul li {
     width: 30px;
     height: 30px;
     /* padding: 6px 9px; */
+    /* display: inline-flex; */
     display: inline-flex;
     justify-content: center;
     padding: 5px;
@@ -1414,11 +1658,31 @@ img {
     margin: 3px;
 }
 
-.btn-prev,
-.btn-next {
+#plant .page .btn-active {
+    color: #c6c9cc;
+    /* border: solid 1px #c6c9cc !important;  */
+}
+
+/* #plant .content__paging .active{
+    background: #d4d99d;
+    border: 1px solid black;
+    border-radius: 5px;
+} */
+
+/* .content_paging .page .active{
+    background: #2b3928;
+    border: 1px solid #2b3928;
+} */
+
+#plant .content__paging .active a {
+    color: #babd8e;
+}
+
+/* .btn-prev,
+ .btn-next {
     border: #2b3928 1px solid;
     border-radius: 50%;
-}
+} */
 
 img {
     /*thu nho hinh vua voi khung */
@@ -1427,70 +1691,42 @@ img {
     height: auto;
 }
 
-#content_plant{
+#content_plant {
     width: 100%;
     height: 40px;
-    background-color: var(--color-background);
-    color: var(--colortext);
+    background-color: #ffefcd;
     border: #2b3928 2px solid;
 }
-#filter , #sort{
+
+#filter,
+#sort {
     width: 20%;
     height: 100%;
-    background-color: var(--color-background);
-    color: var(--colortext);
+    background-color: #ffefcd;
     border-left: #2b3928 2px solid;
     float: right;
     text-align: center;
     box-sizing: border-box;
     display: flex;
     justify-content: center;
-    cursor: pointer ;
+    cursor: pointer;
 }
-#filter .ct , #sort .ct{
+
+.filter-select,
+.sort-select {
     border: none;
     outline: none;
-    background-color: var(--color-background);
-    color: var(--colortext);
+    background-color: #ffefcd;
     font-size: 1.5em;
     text-align: center;
     cursor: pointer;
 }
 
-/*chi tiet san pham */
-/* #wrapper {
-    width: 80%;
-    height: 550px;
-    margin: 0 auto;
-    background: #F9F9F9;
-    font-size: 20px;
-    border: solid 2px var(--color-pr);
-    position: relative;
-    padding: 40px;
-}
-
-.close {
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    font-size: 26px;
-    text-align: center;
-    cursor: pointer;
-    top: 0px;
-    right: 0px;
-    line-height: 15px;
-    cursor: pointer;
-}
-
-.close:hover {
-    background-color: var(--color-bg);
-    color: var(--color-bg1);
-} */
 #detail {
     display: none;
     position: relative;
     display: flex;
-    justify-content: center; 
+    justify-content: center;
     align-items: center;
     /* margin: 10px auto; */
     padding: 50px;
@@ -1504,16 +1740,17 @@ img {
 .form-dt {
     width: 90%;
     height: fit-content;
-    position:absolute;
-    margin:10px auto;
+    position: absolute;
+    margin: 10px auto;
     background-color: var(--color-background);
     display: flex;
     justify-content: center;
     /* padding-top: 10px; */
     z-index: 1;
     /* overflow: hidden; */
-    box-shadow: 0 5px 15px 0  rgba(0, 0, 0, .5);
+    box-shadow: 0 5px 15px 0 rgba(0, 0, 0, .5);
 }
+
 .close {
     /* Position it in the top right corner outside of the modal */
     position: absolute;
@@ -1522,14 +1759,14 @@ img {
     color: #000;
     font-size: 35px;
     font-weight: bold;
-  }
-  
-  /* Close button on hover */
-  .close:hover,
-  .close:focus {
+}
+
+/* Close button on hover */
+.close:hover,
+.close:focus {
     color: red;
     cursor: pointer;
-  }
+}
 
 
 .col-md-5 {
@@ -1543,23 +1780,28 @@ img {
     padding-top: 30px;
 }
 
-.col-md-5 ul , #main-image{
+.col-md-5 ul,
+#main-image {
     float: left;
     padding-top: 10px;
 }
+
 .col-md-5 ul li {
     padding-top: 5px;
     list-style: none;
     padding-left: 30px;
 }
-.col-md-5 ul li img{
+
+.col-md-5 ul li img {
     width: 100px;
     cursor: pointer;
 }
-#main-image{
+
+#main-image {
     width: 500px;
 }
-#main-image img{
+
+#main-image img {
     width: 450px;
     height: 600px;
     padding-top: 5px;
@@ -1569,9 +1811,9 @@ img {
 .col-md-7 {
     float: right;
     width: 50%;
-    height:auto;
+    height: auto;
     display: flex;
-    justify-content:center;
+    justify-content: center;
     font-size: 1.8em;
     box-sizing: border-box;
     text-align: center;
@@ -1593,41 +1835,43 @@ img {
     height: 50px;
     line-height: 50px;
     /* border-bottom: solid 2px #babd8e; */
-    margin-top:40px ;
+    margin-top: 40px;
 }
 
-.col-md-7 li:first-child{
+.col-md-7 li:first-child {
     font-size: 1.7em;
 }
 
-.col-md-7 li:nth-child(3){
+.col-md-7 li:nth-child(3) {
     height: fit-content;
-    text-align:justify;
+    text-align: justify;
     padding-left: 10px;
 }
 
-.col-md-7 li:nth-child(2){
+.col-md-7 li:nth-child(2) {
     font-size: 1.5em;
     color: darkgreen;
 }
 
-.col-md-7 li:last-child{
+.col-md-7 li:last-child {
     display: flex;
-    justify-content:center;
+    justify-content: center;
     font-size: 1.1em;
     margin: 5vh;
     color: var(--colortext);
     text-transform: uppercase;
 
 }
-.col-md-7 li:last-child p{
-    margin:0 10px;
+
+.col-md-7 li:last-child p {
+    margin: 0 10px;
 }
+
 .col-md-7 li .cart {
     width: 200px;
     height: 50px;
     border: solid 2px #babd8e;
-    box-shadow: 0 5px 5px 0 rgba(0,0,0,0.45);
+    box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.45);
     background: var(--color-bg);
     text-align: center;
     color: var(--colortext);
@@ -1635,39 +1879,39 @@ img {
     cursor: pointer;
     text-transform: uppercase;
 }
+
 /* tang giam sl */
-#buy-amount{
+#buy-amount {
     display: flex;
     padding-right: 50px;
 }
-#buy-amount button{
+
+#buy-amount button {
     width: 35px;
     height: 50px;
     outline: none;
-    background-color:var(--color-bg);
-    border: 1px solid #babd8e; 
+    background-color: var(--color-bg);
+    border: 1px solid #babd8e;
     color: var(--coloricon);
 }
-#buy-amount #amount{
+
+#buy-amount #amount {
     width: 40px;
     text-align: center;
     border: 1px solid #eceeec;
     font-size: 0.7em;
     color: var(--colortext);
 }
-#buy-amount button svg{
+
+#buy-amount button svg {
     color: #909090;
 
 }
-#buy-amount button:hover svg{
-    color: #4f4f4f;
-    
-}
-/* input[type='text'] {
-    width: 40px;
-    text-align: center;
 
-} */
+#buy-amount button:hover svg {
+    color: #4f4f4f;
+
+}
 
 /* day la phan plants */
 

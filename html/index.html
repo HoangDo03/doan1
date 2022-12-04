@@ -6,21 +6,16 @@
     <title>bloominous</title>
     <link rel="stylesheet" href="../css/index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
-    <link rel="icon" type="image/x-icon"
-        href="https://cdn.shopify.com/s/files/1/0556/1873/2316/products/Blooming_luminous_3000x2500px_1.png?v=1666970276&width=1100">
-    <script src="../js/index.js"></script>
+    <link rel="icon" type="image/x-icon" href="img/leaf.png">
+
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script src="https://code.jquery.com/jquery-3.4.1.js"
-        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
-
-
+    <!-- <script src="https://code.jquery.com/jquery-3.4.1.js"
+            integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script> -->
 </head>
 
 <body>
-    <div class="adcontent"><b>Free shipping for order over $150</b>
-        <div id="btn-admin" onclick="redirect_admin();"><i class="fa-solid fa-gear"></i></div>
-    </div>
+    <div class="adcontent"><b>Free shipping for order over $150</b></div>
     <header>
         <div id="nav_an">
             <nav>
@@ -49,7 +44,7 @@
         <script>
             const nav = document.querySelector('nav');
             const toggle_menu = document.querySelector('.toggle_menu');
-            const content = document.querySelector('.content');
+            const content = document.querySelector('ul');
             function toggle() {
                 nav.classList.toggle('show');
                 content.classList.toggle('change');
@@ -65,9 +60,7 @@
                         <li><a href="index.html?plantcare">plant care</a></li>
                     </ul>
                 </div>
-                <div id="article"onclick="home_redirect()"><img
-                        src="https://cdn.shopify.com/s/files/1/0669/8346/1153/products/bloominous_5.png?v=1667485715&width=1100 "
-                        style="width: 350px;height:80px;"></div>
+                <div id="article"><img src="img/title.png" style="width: 350px;height:80px;"></div>
                 <div class="menuright">
                     <ul>
                         <li><a href="index.html?contactus">contact us</a></li>
@@ -83,16 +76,38 @@
                 </div>
             </div>
         </div>
-        <script src="../js/index.js"></script>
+      
+
         </div>
+        <!-- <div id='login-form'class='login-page'>
+                <div class="form-box">
+                    <span onclick="document.getElementById('login-form').style.display='none'" class="close" title="Close login-page">&times;</span>
+                    <span onclick="document.getElementById('login-form').style.display='none'" class="close" title="Close login-page">&times;</span>
+                    <div class='button-box'>
+                        <div id='btn'></div>
+                        <button type='button'onclick='login()'class='toggle-btn'>Log In</button>
+                        <button type='button'onclick='register()'class='toggle-btn'>Register</button>
+                    </div>
+                    <form id='login' class='input-group-login'>
+                        <input type='text'class='input-field'placeholder='Username' required >
+                        <input type='password'class='input-field'placeholder='Enter Password' required>
+                        <input type='checkbox'class='check-box'><span>Remember Password</span>
+                        <button type='submit'class='submit-btn'>Log in</button>
+                    </form>
+                    <form id='register' class='input-group-register'>
+                        <input type='text'class='input-field'placeholder='First Name' required>
+                        <input type='text'class='input-field'placeholder='Last Name ' required>
+                        <input type='username'class='input-field'placeholder='Username' required>
+                        <input type='password'class='input-field'placeholder='Enter Password' required>
+                        <input type='password'class='input-field'placeholder='Confirm Password'  required>
+                        <input type='checkbox'class='check-box'><span>I agree to the terms and conditions</span>
+                        <button type='submit'class='submit-btn'>Register</button>
+                    </form>
+                </div>
+            </div> -->
+            
     </header>
     <!-- day la trang chu -->
-    <!-- <div id="search">
-        <form action="" id="search-box">
-            <input type="text" id="search-text" placeholder="What do you want to find?">
-            <button id="search-button"><i class="fa-solid fa-magnifying-glass"></i></button>
-        </form>
-    </div> -->
     <div id="change">
         <div id="section1">
             <div class="text">
@@ -129,29 +144,35 @@
                         </div>       -->
             </div>
             <div id="section2_img">
-                <img src="https://cdn.shopify.com/s/files/1/0666/1940/8682/products/Blooming_luminous_4.png?v=1666927994"
-                    alt="">
+                <img src="img/section2.png" alt="">
             </div>
         </div>
         <div id="section3">
             <div class="text">
                 <h2>Best seller of the month</h2>
             </div>
-            <div id="container_bs">
-                <div class="divproduct"><img
-                        src="https://cdn.shopify.com/s/files/1/0556/1873/2316/products/4.png?v=1666253748&width=1100"
-                        alt="Cây trầu bà Nam Mỹ">Monstera Deliciosa</div>
-                <div class="divproduct"><img
-                        src="https://cdn.shopify.com/s/files/1/0556/1873/2316/products/3.png?v=1666253659&width=1100"
-                        alt="Cây dương xỉ">Autumn Fern</div>
-                <div class="divproduct"><img
-                        src="https://cdn.shopify.com/s/files/1/0556/1873/2316/products/2.png?v=1666253628&width=1100"
-                        alt="Cây lưỡi hổ">Snake Plant Laurentii</div>
-                <div class="divproduct"><img
-                        src="https://cdn.shopify.com/s/files/1/0666/1940/8682/products/Blooming_luminous_3000x2500px.png?v=1666797581"
-                        alt="Cây Trường Sinh">Peperomia Obtusifolia</div>
-                <div style="clear:both"></div>
+            <!-- <i id="left" class="fa-solid fa-angle-left"></i> -->
+            <input type="radio" name="dot" id="one">
+            <input type="radio" name="dot" id="two">
+            <div class="container_bs" id="container_bs">
+                <div class="slide-container">
+                    <div class="divproduct"><img src="img/monstera.png" alt="Cây trầu bà Nam Mỹ">Monstera Deliciosa</div>
+                    <div class="divproduct"><img src="img/autumn.png" alt="Cây dương xỉ">Autumn Fern</div>
+                    <div class="divproduct"><img src="img/snakelauren.png" alt="Cây lưỡi hổ">Snake Plant Laurentii</div>
+                    <div class="divproduct"><img src="img/peperomia.jpg" alt="Cây Trường Sinh">Peperomia Obtusifolia</div>
+                    <!-- <div style="clear:both"></div> -->
+                    <div class="divproduct"><img src="img/feedback4.png" style="width: 275px; height:230px" alt=""></div>
+                    <div class="divproduct"><img src="img/feedback1.png" style="width: 275px; height:230px" alt=""></div>
+                    <div class="divproduct"><img src="img/feedback2.png" style="width: 275px; height:230px" alt=""></div>
+                    <div class="divproduct"><img src="img/feedback3.png" style="width: 275px; height:230px" alt=""></div>
+                    <!-- <div style="clear:both"></div> -->
+                </div>
             </div>
+            <div class="button">
+                <label for="one" class=" active one"></label>
+                <label for="two" class="two"></label>
+            </div>
+            <!-- <i id="right" class="fa-solid fa-angle-right"></i> -->
         </div>
         <div id="section4">
             <div class="text">
@@ -162,6 +183,7 @@
                     will grow beautifully and brilliantly.</div>
                 <div>Tất cả cây cảnh trong cửa hàng nhận được ánh nắng mặt trời, sự quan tâm, tình yêu từ chúng tôi đều
                     sẽ phát triển tươi đẹp, rực rỡ và tỏa sáng.</div>
+                <!--Giai thich nghia cua tu -->
             </div>
         </div>
         <div id="section5">
@@ -183,112 +205,36 @@
         </div>
     </div>
     <!-- day la trang san pham -->
-    <!-- danh sach san pham -->
-    <div id='detail'class='detail-p' style="display: none;">
+    <div id='detail' class='detail-p' style="display: none;">
         <div class="form-dt">
-            <span onclick="document.getElementById('detail').style.display='none'" class="close" title="Close">&times;</span>
+            <span onclick="document.getElementById('detail').style.display='none'" class="close"
+                title="Close">&times;</span>
             <div id="product-detail" class="row"></div>
         </div>
     </div>
     <div id="plant" style="display:none">
         <div id="search">
-            <div class="search-boxx" id="search-box">
+            <div class="search-box" id="search-box">
                 <input type="text" id="search-text" placeholder="What do you want to find?">
                 <button id="search-button"><i class="fa-solid fa-magnifying-glass"></i></button>
             </div>
         </div>
-        <!-- <div id="product-detail" class="row"></div> -->
         <div id="wrapper">
-            <!-- <div class="close">x</div>-->
-            <!-- <div id="product-detail" class="row"> -->
-                <!-- <div class="col-md-5"><img class="img" src="img/icon/10040.jpg"></div>
-                <div class="col-md-7">
-                    <ul>
-                        <li>Tên Sản phẩm</li>
-                        <li>Giá</li>
-                        <li>Kích thước</li>
-                        <li >Số lượng
-                            <div id="buy-amount"><button class="minus-btn" onclick="handle_minus()"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 12h-15" />
-                                    </svg>
-                                </button>
-                                <input type="text" name="amount" id="amount" value="1" />
-                                <button class="plus" onclick="handle_plus()"><svg xmlns="http://www.w3.org/2000/svg"fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6">
-                                        <path stroke-linecap="round" stroke-linejoin="round"d="M12 4.5v15m7.5-7.5h-15" />
-                                    </svg>
-                                </button>
-                            </div>
 
-                        </li>
-                        <li>add cart</li>
-                    </ul>
-                </div>
-            </div> -->
-                <script>
-                    
-                    // console.log(amountElement);
-                    // const amount = document.getElementById('amount').value
-                    // const amountElement=document.getElementById('amount');
-                    // console.log(amountElement);
-                 
-                    // const amount=amountElement.value;
-                    // console.log(amount);
-
-
-                    // function render(amount) {
-                    //     // console.log(amount);
-                    //     amountElement.value = amount;
-                    // }
-                    // //handle plus
-                    // function handle_plus(amount){
-
-                    //     amount++;
-                    //     render(amount);
-                    //     console.log(amount)
-                    // }
-                    // //handle minus
-                    // function handle_minus(amount){
-                    //     if (amount > 1)
-                    //         amount--;
-                    //     render(amount);
-                    //     console.log(amount)
-                    // }
-                    // amountElement.addEventListener('input', () => {
-                    //     amount = amountElement.value;
-                    //     amount = parseInt(amount);
-                    //     amount = (isNaN(amount) || amount == 0) ? 1 : amount;
-                    //     //console.log(amount);
-                    // })
-
-
-                    // const handle_plus= document.querySelector(".plus-btn");
-                    // const handle_minus=document.querySelector(".minus-btn");
-                    // const amount = document.querySelector('amount');
-                    // let a = 1;
-                    // handle_plus.addEventListener('click',() =>{
-                    //     a++;
-                    //     alert(a)
-                    //     a = (a<10) ? "0" + a:a;
-                    //     amount.innerText = a;
-                    //     alert(a);
-                    // })
-                    // handle_minus.addEventListener('click',() =>
-                    // {
-                    //     if(a>1){
-                    //     a--;
-                    //     amount.innerText = a;
-                    //     }
-                    // })
-                </script>
-            </div>
-            <div id="title-plant">
-                <h2>products</h2>
-            </div>
-            <div id="container">
-                <!-- <div id="container_pr"  >
+        </div>
+        <!-- <div
+            style="color: var(--colortext);text-align: center;text-transform: uppercase;font-family: florence, cursive;padding: 30px;">
+            <h2>products</h2>
+        </div> -->
+        <div id="title-plant">
+            <h2>products</h2>
+        </div>
+        <div id="container">
+            <!-- <div id="container_pr"  >
                 </div> -->
-            </div>
-            <div class="no-result">No results could be found</div>
+        </div>
+        <div class="no-result" id="no-result">No results could be found</div>
+        <div class="content__paging">
             <div class="page">
                 <ul>
                     <li class="btn-prev btn-active fas fa-angle-left"></li>
@@ -309,73 +255,156 @@
             </div>
             <div class="total-page"></div>
             <div class="total-item"></div>
-            <div id="content_plant">
-                <div id="filter">
-                    <select name="" id="ct" class="ct">
-                        <option value="" id="op1" style="display:none ;">Filter</option>
-                        <option value="" id="op2">Indoor</option>
-                        <option value="" id="op3">Outdoor</option>
-                    </select>
-                </div>
-                <div id="sort">
-                    <select name="" id="ct" class="ct">
-                        <option value="Default" style="display: none;">Sort</option>
-                        <option value="HighToLow" onclick="low()" ;>Price,high to low</option>
-                        <option value="LowToHigh">Price,low to high</option>
-                        <option value="">ALphabetically, A to Z</option>
-                        <option value="">ALphabetically, Z to A</option>
-                    </select>
-                </div>
+        </div>
+        <div id="content_plant">
+            <div id="filter">
+                <select name="" id="filter-select" class="filter-select">
+                    <option value="all" id="op1" onclick="active">All</option>
+                    <option value="indoor" id="op2">Indoor</option>
+                    <option value="outdoor" id="op3">Outdoor</option>
+                </select>
             </div>
+            <div id="sort">
+                <select name="" id="sort-select" class="sort-select">
+                    <option value="Default" style="display: none;">Sort</option>
+                    <option value="HighToLow" onclick="low()" ;>Price,high to low</option>
+                    <option value="LowToHigh">Price,low to high</option>
+                    <option value="A-Z">ALphabetically, A to Z</option>
+                    <option value="Z-A">ALphabetically, Z to A</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <!-- <script type="text/javascript">
+            const search = () => {
+            const searchbox = document.getElementById("search-text").value.toUpperCase();
+            const storeitems = document.getElementById(".divproduct")
+            const product = document.querySelectorAll(".box")
+            const pname = document.getElementsByTagName("h4")
 
+            for (var i=0; i<pname.length; i++) {
+                let match = product[i].getElementsByTagName('h4')[0];
+
+                if(match) {
+                    let textvalue = match.textContent || match.innerHTML
+
+                    if(textvalue.toUpperCase().indexOf(searchbox) > -1) {
+                        product[i].style.display = "";
+                    } else {
+                        product[i].style.display = "none";
+                    }
+                }
+            }
+            }
+        </script> -->
+    
+    <!-- day la trang plant care -->
+    <div id="takecare" style="display:none ;">
+        <div>
+            <h1>How to Take Care of Plants</h1>
         </div>
-        <!-- <script src="nhap.js"></script> -->
-        <script src="../js/paging.js"></script>
-        <!-- day la trang plant care -->
-        <div id="takecare" style="display:none ;">
-            <div>
-                <h1>How to Take Care of Plants</h1>
+        <div class="text">
+            <div class="english">
+                <h3>Plants, both indoors and out, are lovely additions to any décor. They are generally easy to take
+                    care of and maintain, and will thrive when given proper care and treatment. Whether you're unsure of
+                    how to care for your plants , read on to some tips on properly caring for indoor and garden plants.
+                </h3>
+                <div> Thrives in medium to bright indirect light, but can tolerate low indirect light.</div>
+                <div> Water every 1-2 weeks, allowing soil to dry out half way down between waterings. Expect to water
+                    more often in brighter light and less often in lower light. This plant can benefit from extra
+                    humidity. Calatheas can be sensitive to hard tap water. Try using filtered water or leaving water
+                    out overnight before using.</div>
+                <div> This is a pet friendly plant.</div>
             </div>
-            <div class="text">
-                <div class="english">
-                    <h3>Plants, both indoors and out, are lovely additions to any décor. They are generally easy to take
-                        care of and maintain, and will thrive when given proper care and treatment. Whether you're
-                        unsure of
-                        how to care for your plants , read on to some tips on properly caring for indoor and garden
-                        plants.
-                    </h3>
-                    <div> Thrives in medium to bright indirect light, but can tolerate low indirect light.</div>
-                    <div> Water every 1-2 weeks, allowing soil to dry out half way down between waterings. Expect to
-                        water
-                        more often in brighter light and less often in lower light. This plant can benefit from extra
-                        humidity. Calatheas can be sensitive to hard tap water. Try using filtered water or leaving
-                        water
-                        out overnight before using.</div>
-                    <div> This is a pet friendly plant.</div>
-                </div>
-                <div class="vietnamese">
-                    <h3>Cây cảnh, cả trong nhà và ngoài trời, đều đã trở thành những vật dụng trang trí đáng yêu và gần
-                        gũi.
-                        Chúng thường dễ chăm sóc và nuôi dưỡng, và sẽ phát triển mạnh khi có cách chăm sóc thích hợp.
-                        Nếu
-                        bạn không chắc chắn về cách chăm sóc cây trồng, hãy đọc hướng dẫn sau đây để chăm sóc cây trồng
-                        trong nhà và ngoài vườn đúng cách.</h3>
-                    <div> Phát triển mạnh trong ánh sáng gián tiếp trung bình đến sáng, nhưng có thể chịu được ánh sáng
-                        gián
-                        tiếp thấp.</div>
-                    <div> Tưới nước 1-2 lần một tuần. Thường xuyên tưới nước nếu ánh sáng mạnh và ít nếu ánh sáng yếu.
-                        Phun
-                        sương cho cây thường xuyên để giữ cho cây luôn tươi mới.</div>
-                    <div> Cây thân thiện với vật nuôi</div>
-                </div>
+            <div class="vietnamese">
+                <h3>Cây cảnh, cả trong nhà và ngoài trời, đều đã trở thành những vật dụng trang trí đáng yêu và gần gũi.
+                    Chúng thường dễ chăm sóc và nuôi dưỡng, và sẽ phát triển mạnh khi có cách chăm sóc thích hợp. Nếu
+                    bạn không chắc chắn về cách chăm sóc cây trồng, hãy đọc hướng dẫn sau đây để chăm sóc cây trồng
+                    trong nhà và ngoài vườn đúng cách.</h3>
+                <div> Phát triển mạnh trong ánh sáng gián tiếp trung bình đến sáng, nhưng có thể chịu được ánh sáng gián
+                    tiếp thấp.</div>
+                <div> Tưới nước 1-2 lần một tuần. Thường xuyên tưới nước nếu ánh sáng mạnh và ít nếu ánh sáng yếu. Phun
+                    sương cho cây thường xuyên để giữ cho cây luôn tươi mới.</div>
+                <div> Cây thân thiện với vật nuôi</div>
             </div>
         </div>
+    </div>
+            <!-- gio hang -->
+            <div id="cart"style="display:none ;">
+                <form id="cart">
+                    <div class="title">
+                        Shopping Cart
+                    </div>
+                    <table>
+                       <thead>
+                        <tr>
+                            <th>Product</th>
+                            <th>Name</th>
+                            <th>Price</th>
+                            <th>Amount</th>
+                            <th>Aciton</th>
+                        </tr>
+                       </thead>
+                        <tbody id ="mycart">
+                            
+                        </tbody>
+                    </table>
+                    <div id="checkout">
+                        <div class="price-total">
+                            <p>Total: <span></span></p>
+                        </div>
+                        <!--<div class ="clear"><button>Clear</button></div>-->
+                        <div class="btn-checkout">
+                            <button>Checkout</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+           
+    <script>
+        var x = document.getElementById('login');
+        var y = document.getElementById('register');
+        var z = document.getElementById('btn');
+        function register() {
+            x.style.left = '400px'; /* dinh vi phan tu -400 tu canh trai*/
+            y.style.left = '50px';
+            z.style.left = '110px';
+        }
+        function login() {
+            x.style.left = '50px';
+            y.style.left = '450px';
+            z.style.left = '0px';
+        }
+    </script>
+    <script>
+        var modal = document.getElementById('login-form');
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        } /* dung chuot click thi no nhay vao ham. Neu click vao dung doi tuong(target) la modal 
+            thi doi style display cua modal element thanh none*/
+    </script>
+    <!-- giu header -->
+    <script>
+        window.onscroll = function () { myFunction() };
+
+        var header = document.getElementById("header");
+        var sticky = header.offsetTop;
+
+        function myFunction() {
+            if (window.pageYOffset >= sticky) {
+                header.classList.add("sticky")
+            } else {
+                header.classList.remove("sticky");
+            }
+        }
+    </script>
 </body>
 <footer>
     <div id="footer">
         <div id="logo">
-            <img src="https://cdn.shopify.com/s/files/1/0666/1940/8682/products/Blooming_luminous_1.png?v=1666891958"
-                alt="ourlogo">
+            <img src="img/logo.png" alt="ourlogo">
             <div id="list_social">
                 <a href="#"><i class="fa-brands fa-facebook"></i></a>
                 <a href="#"><i class="fa-brands fa-instagram"></i></a>
@@ -389,7 +418,10 @@
             </ul>
         </div>
     </div>
-
+    <script src="../js/localStorage.js"></script>
+    <script src="../js/index.js"></script>
+    <script src="../js/paging.js"></script>
+    <script src="../js/cart.js"></script>
 </footer>
 
 </html>
