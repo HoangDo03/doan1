@@ -61,22 +61,48 @@
                     </ul>
                 </div>
                 <div id="article"><img src="img/title.png" style="width: 350px;height:80px;"></div>
-                <div class="menuright">
+                <div class="menuright-auth">
                     <ul>
-                        <li><a href="index.html?contactus">contact us</a></li>
-                        <li><a href="login.html">account</a></li>
-                        <li><a href="index.html?cart">cart</a></li>
+                        <!-- <li><a href="index.html?contactus">contact us</a></li> -->
+                        <!-- <li><a href="login.html">account</a></li> -->
+                        <li><a href="login.html" class="btn btn--a primary login">Login</a></li>
+                        <li><a href="signup.html" class="btn btn--a secondary signup">Sign Up</a></li>
+                        <li><a href="index.html" class="signout hidden">
+                            <i class="fa-solid fa-right-from-bracket"></i>
+                          </a>
+                        </li>
+                        <li><a href="admin.html" class="ad"><i class="fa-solid fa-gear"></i></a></li> 
+                        <li><a href="index.html?cart"><i class="fa-solid fa-cart-shopping"></i></a></li>
                     </ul>
                 </div>
+
             </div>
-            <div class="header_item">
+            <!-- <div class="header_item">
                 <div>
                     <i class="fa-solid fa-user"></i>
                     <i class="fa-solid fa-cart-shopping"></i>
                 </div>
-            </div>
+            </div> -->
+            <!-- <div class="menu_user">
+                <div class="menuleft">
+                    <ul>
+                        <li><a href="#" onclick="home_redirect()">home</a></li>
+                        <li><a href="index.html?plants">plants</a></li>
+                        <li><a href="index.html?plantcare">plant care</a></li>
+                    </ul>
+                </div>
+                <div id="article"><img src="img/title.png" style="width: 350px;height:80px;"></div>
+                <div class="menuright">
+                    <ul>
+                        <li><a href="index.html?contactus">contact us</a></li>
+                        <li><a href="login.html">account</a></li> 
+                        <li>Sign out</li>
+                        <li><a href="index.html?cart">cart</a></li>
+                    </ul>
+                </div>
+            </div> -->
         </div>
-      
+
 
         </div>
         <!-- <div id='login-form'class='login-page'>
@@ -105,7 +131,7 @@
                     </form>
                 </div>
             </div> -->
-            
+
     </header>
     <!-- day la trang chu -->
     <div id="change">
@@ -156,15 +182,21 @@
             <input type="radio" name="dot" id="two">
             <div class="container_bs" id="container_bs">
                 <div class="slide-container">
-                    <div class="divproduct"><img src="img/monstera.png" alt="Cây trầu bà Nam Mỹ">Monstera Deliciosa</div>
+                    <div class="divproduct"><img src="img/monstera.png" alt="Cây trầu bà Nam Mỹ">Monstera Deliciosa
+                    </div>
                     <div class="divproduct"><img src="img/autumn.png" alt="Cây dương xỉ">Autumn Fern</div>
                     <div class="divproduct"><img src="img/snakelauren.png" alt="Cây lưỡi hổ">Snake Plant Laurentii</div>
-                    <div class="divproduct"><img src="img/peperomia.jpg" alt="Cây Trường Sinh">Peperomia Obtusifolia</div>
+                    <div class="divproduct"><img src="img/peperomia.jpg" alt="Cây Trường Sinh">Peperomia Obtusifolia
+                    </div>
                     <!-- <div style="clear:both"></div> -->
-                    <div class="divproduct"><img src="img/feedback4.png" style="width: 275px; height:230px" alt=""></div>
-                    <div class="divproduct"><img src="img/feedback1.png" style="width: 275px; height:230px" alt=""></div>
-                    <div class="divproduct"><img src="img/feedback2.png" style="width: 275px; height:230px" alt=""></div>
-                    <div class="divproduct"><img src="img/feedback3.png" style="width: 275px; height:230px" alt=""></div>
+                    <div class="divproduct"><img src="img/feedback4.png" style="width: 275px; height:230px" alt="">
+                    </div>
+                    <div class="divproduct"><img src="img/feedback1.png" style="width: 275px; height:230px" alt="">
+                    </div>
+                    <div class="divproduct"><img src="img/feedback2.png" style="width: 275px; height:230px" alt="">
+                    </div>
+                    <div class="divproduct"><img src="img/feedback3.png" style="width: 275px; height:230px" alt="">
+                    </div>
                     <!-- <div style="clear:both"></div> -->
                 </div>
             </div>
@@ -297,7 +329,7 @@
             }
             }
         </script> -->
-    
+    <script src="../js/paging.js"></script>
     <!-- day la trang plant care -->
     <div id="takecare" style="display:none ;">
         <div>
@@ -329,38 +361,38 @@
             </div>
         </div>
     </div>
-            <!-- gio hang -->
-            <div id="cart"style="display:none ;">
-                <form id="cart">
-                    <div class="title">
-                        Shopping Cart
-                    </div>
-                    <table>
-                       <thead>
-                        <tr>
-                            <th>Product</th>
-                            <th>Name</th>
-                            <th>Price</th>
-                            <th>Amount</th>
-                            <th>Aciton</th>
-                        </tr>
-                       </thead>
-                        <tbody id ="mycart">
-                            
-                        </tbody>
-                    </table>
-                    <div id="checkout">
-                        <div class="price-total">
-                            <p>Total: <span></span></p>
-                        </div>
-                        <!--<div class ="clear"><button>Clear</button></div>-->
-                        <div class="btn-checkout">
-                            <button>Checkout</button>
-                        </div>
-                    </div>
-                </form>
+    <!-- gio hang -->
+    <div id="cart" style="display:none ;">
+        <form id="cart">
+            <div class="title">
+                Shopping Cart
             </div>
-           
+            <table>
+                <thead>
+                    <tr>
+                        <th>Product</th>
+                        <th>Name</th>
+                        <th>Price</th>
+                        <th>Amount</th>
+                        <th>Aciton</th>
+                    </tr>
+                </thead>
+                <tbody id="mycart">
+
+                </tbody>
+            </table>
+            <div id="checkout">
+                <div class="price-total">
+                    <p>Total: <span></span></p>
+                </div>
+                <!--<div class ="clear"><button>Clear</button></div>-->
+                <div class="btn-checkout">
+                    <button>Checkout</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <script src="../js/cart.js"></script>
     <script>
         var x = document.getElementById('login');
         var y = document.getElementById('register');
@@ -418,10 +450,14 @@
             </ul>
         </div>
     </div>
-    <script src="../js/localStorage.js"></script>
-    <script src="../js/index.js"></script>
-    <script src="../js/paging.js"></script>
-    <script src="../js/cart.js"></script>
+    <!-- <script src="localStorage.js"></script> -->
+    <script type="module" src="../js/data.js"></script>
+    <script type="module" src="../js/need.js"></script>
+    <script type="module" src="../js/handleSign.js"></script>
+    <script type="module" src="../js/index.js"></script>
+    <script type="module" src=""></script>
+   
+
 </footer>
 
 </html>

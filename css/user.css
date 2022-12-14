@@ -1,0 +1,148 @@
+:root {
+    --green: #babd8e;
+    --dark-green: #2b3928;
+    --yellow: #ffefcd;
+  }
+  
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #f1f5f9;
+    font-family: "Roboto", sans-serif;
+  }
+
+.wapper {
+    margin: 20px auto;
+    width: 370px;
+    background-color:white;
+    padding: 10px 30px 30px;
+    border-radius: 50px;
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.5);
+    font-family:  "Roboto", sans-serif;
+  }
+  .wapper h1{
+    font-size: 2em;
+    text-align: center;
+    margin: 30px;
+    color: var(--dark-green);
+    font-family:  "Roboto", sans-serif;
+  }
+
+  .wapper .btn {
+    padding: 10px 15px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    background: var(--dark-green);
+    color: var(--yellow);
+    text-transform: uppercase;
+    transition: all 0.2s linear;
+  }
+  
+  .btn:hover {
+    transform: scale(1.1);
+  }
+  
+  .input__field input:focus {
+    border: 1px solid darkgreen;
+  }
+  
+  .wapper input::placeholder {
+    color: var(--dark-green);
+  }
+  
+  /*.wapper .login-link {
+      display: block;
+      transform: translateX(120px);
+      margin-bottom: 20px;
+      color: var(--bg--color);
+    }
+    */
+  /*.wapper .signup-link{
+      display: block;margin: 40px auto;
+      text-decoration: none;
+      color: grey;
+      transition: .3s linear;
+    }*/
+  .wapper .login-link,.signup-link {
+    display: block;
+    text-decoration: none;
+    color: var(--dark-green);
+    text-transform: uppercase;
+    transition: .3s linear;
+    padding-top: 17px;
+    margin-left: 5px;
+  }
+  
+  .wapper div:last-child{
+    display: flex;
+    justify-content: center;
+  }
+  .wapper p{
+    color: var(--green);
+    letter-spacing: 1px;
+  
+  }
+  
+  .wapper .username,
+  .email,
+  .password {
+    display: flex;
+    margin-left: 20px;
+    margin: 10px;
+  }
+  .label {
+    font-size: 1.2em;
+    display: flex;
+    justify-content: left;
+    color: var(--dark-green);
+  }
+  
+  .input__field {
+    display: flex;
+    flex-direction: column;
+    gap: 10px 0;
+    margin-bottom: 15px;
+  }
+  
+  .input__field input {
+    outline: none;
+    padding: 5px 10px;
+    font-size: 1.2rem;
+    border-radius: 20px;
+    transition: all 0.3s linear;
+    border: 1px solid var(--dark-green);
+    font-size: 1.2em;
+    height: 40px;
+    background-color: white;
+    width: 95%;
+  }
+  
+  .input__field input:focus {
+    background-color: var(--green);
+  }
+  
+  .error {
+    color: red;
+  }
+  
+  .input-with-icon {
+    width: 95%;
+    position: relative;
+  }
+  
+  .input-with-icon input {
+    width: 100%;
+  }
+  
+  .input-with-icon i {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    font-size: 1.2rem;
+    color:var(--dark-green);
+    cursor: pointer;
+  }

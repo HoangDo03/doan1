@@ -1,3 +1,11 @@
+const $ = document.querySelector.bind(document);
+
+var login = $(".option-login");
+var validation1 = $("#form-1");
+var validation2 = $("#form-2");
+var logout = $(".option-logout");
+
+
 function redirect(){
     var url = window.location.href;//cac href hien co tren trang 
     var id = url.split('?');//truot den ?
@@ -34,7 +42,6 @@ function redirect(){
 window.onload=function()//chuyen huong trang web
 {
     redirect();
-    redirect_page();
 }
 function home_redirect(){
     // alert('Home');
@@ -96,7 +103,7 @@ then close all select boxes:*/
 
 function changeImage(id){
     // console.log(id);
-    let image_path = document.getElementById(id).getAttribute('src');
+    let image_path = document.querySelector(`img#${id}`).getAttribute('src');
     // console.log(image_path);
     document.getElementById('image_main').setAttribute('src',image_path);
 }

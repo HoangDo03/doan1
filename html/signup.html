@@ -1,47 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../css/signup.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
-      rel="stylesheet"
-    />
-    <title>Sign up</title>
-  </head>
-  <body>
-    <div class="wapper">
-      <div class="wapper-heading">
-        <h1>Sign Up</h1>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" type="image/x-icon" href="./images/logo.png" />
+  <script src="https://kit.fontawesome.com/10c30652a2.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Poppins:wght@200;300;400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="../css/user.css">
+  <title>sign up</title>
+</head>
+
+<body>
+  <section class="wapper">
+    <h1>Sign up</h1>
+    <form class="form-1">
+      <div class="input__field">
+        <label for="username" class="label">Username</label>
+        <input type="text" id="username" placeholder="Enter your username..." rules="require">
+        <span class="error"></span>
       </div>
-      <form>
-        <div class="input__field">
-          <span class="user_name">Username</span>
-          <input id="username" type="text" placeholder="Type your User Name" />
+      <div class="input__field">
+        <label for="email" class="label">Email</label>
+        <input type="text" id="email" placeholder="Enter your email..." rules="require">
+        <span class="error"></span>
+      </div>
+      <div class="input__field">
+        <label for="password" class="label">Password</label>
+        <div class="input-with-icon">
+          <input type="password" id="password" placeholder="Enter your password..." rules="require|max-10">
+          <i class="fa-solid fa-eye-slash hide-password"></i>
+          <i class="fa-solid fa-eye hidden show-password"></i>
         </div>
-
-        <div class="input__field">
-          <span class="gmail">Email</span>
-          <input id="email" type="email" placeholder="Type your Email" />
+        <span class="error"></span>
+      </div>
+      <div class="input__field">
+        <label for="confirm-password" class="label">Confirm Password</label>
+        <div class="input-with-icon">
+          <input type="password" id="confirm-password" placeholder="Enter your password..."
+            rules="require|max-10|confirm">
+          <i class="fa-solid fa-eye-slash hide-password"></i>
+          <i class="fa-solid fa-eye hidden show-password"></i>
         </div>
-        <div class="input__field">
-          <span class="password">Password</span>
-          <input id="password" type="password" placeholder="Type your Password" />
-        </div>
-       
-
-        <button class="btn btn-signup">Sign Up</button>
+        <span class="error"></span>
+      </div>
+      <button class="btn btn-signup">Sign Up</button>
     
         <div>
           <p>Have an account?</p>
           <a href="login.html" class="login-link">Login</a>
         </div>
-      </form>
-    </div>
-    <script src="../js/signup.js"></script>
-  </body>
+    </form>
+  </section>
+  <script type="module" src="../js/signup.js"></script>
+</body>
+
 </html>

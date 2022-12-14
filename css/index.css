@@ -250,13 +250,16 @@ ul li {
     margin: 0;
     padding: 0;
 }
-
+.hidden{
+    display: none;
+}
 .menu {
     width: 100%;
     height: fit-content;
     background-color: var(--color-nav);
     display: flex;
     justify-content: space-between;
+    color: var(--colortext);
 }
 
 .menuleft {
@@ -265,7 +268,7 @@ ul li {
     padding-top: 25px;
 }
 
-.menuright {
+.menuright-auth{
     /* width: 30%; */
     padding-top: 25px;
     float: right;
@@ -299,6 +302,7 @@ ul li {
     background-color: var(--color-nav-buton);
     border-radius: 100px;
     padding: 5px 10px;
+    color: var(--color-text);
 }
 
 .menu ul li:hover>a {
@@ -394,7 +398,7 @@ ul li {
     background: transparent;
     border: 0;
     outline: none;
-    position: relative;
+    position:relative
 }
 
 #btn {
@@ -1476,6 +1480,85 @@ img {
         #subcribe .text {
             padding-top: 10px;
         }
+        .col-md-5 {
+            
+        }
+        
+        .col-md-5 ul,
+        #main-image {
+            
+        }
+        
+        .col-md-5 ul li {
+            
+        }
+        
+        .col-md-5 ul li img {
+            
+        }
+        
+        #main-image {
+            
+        }
+        
+        #main-image img {
+            
+        }
+        
+        .col-md-7 {
+            
+        
+        }
+        
+        .col-md-7 ul {
+           
+        }
+        
+        
+        .col-md-7 li {
+            
+        }
+        
+        .col-md-7 li:first-child {
+            
+        }
+        
+        .col-md-7 li:nth-child(3) {
+            
+        }
+        
+        .col-md-7 li:nth-child(2) {
+            font-size: 1.5em;
+            color: darkgreen;
+        }
+        
+        .col-md-7 li:last-child {
+            display: flex;
+            justify-content: center;
+            font-size: 1.1em;
+            margin: 5vh;
+            color: var(--colortext);
+            text-transform: uppercase;
+        
+        }
+        
+        .col-md-7 li:last-child p {
+            margin: 0 10px;
+        }
+        
+        .col-md-7 li .cart {
+            width: 200px;
+            height: 50px;
+            border: solid 2px #babd8e;
+            box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.45);
+            background: var(--color-bg);
+            text-align: center;
+            color: var(--colortext);
+            font-size: 25px;
+            cursor: pointer;
+            text-transform: uppercase;
+        }
+        
     }
 
     @media screen and (max-width:590px) {

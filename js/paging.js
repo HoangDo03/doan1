@@ -604,13 +604,13 @@ function show_detail(container,idx) {
     
     html_detail+= `<div class="col-md-5"> 
     <ul> 
-            <li><img src="`+item.img1+`" onclick="changeImage('one')" id="one"></li>
-            <li><img src="`+item.img2+`" onclick="changeImage('two')" id="two"></li>
-            <li><img src="`+item.img3+`" onclick="changeImage('three')" id="three"></li>
-            <li><img src="`+item.img4+`" onclick="changeImage('four')" id="four"></li>
+            <li><img src=${item.img1} onclick="changeImage('one')" id="one"></li>
+            <li><img src=${item.img2}  onclick="changeImage('two')" id="two"></li>
+            <li><img src=${item.img3}  onclick="changeImage('three')" id="three"></li>
+            <li><img src=${item.img4}  onclick="changeImage('four')" id="four"></li>
         </ul>
         <div id="main-image">
-            <img src="`+item.image+`" id="image_main"></li>
+            <img src= ${item.image}  id="image_main"></li>
         </div></div>
      <div class="col-md-7">
          <ul>
